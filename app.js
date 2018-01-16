@@ -6,6 +6,14 @@ app.use((req, res, next) => {
   next();
 });
 
+app.use('/special/', (req, res, next) => {
+console.log("HAHAHAHAHA.");
+next();
+});
+
+app.get('/special/subpath', (req, res) =>
+        res.send("You've reached the special place."));
+
 app.get('/', (req, res) =>
         res.send('howdy'));
 
