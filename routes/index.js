@@ -5,8 +5,19 @@ const tweetBank = require('../tweetBank');
 
 router.get('/', function (req, res) {
   let tweets = tweetBank.list();
-  res.render( 'index', { tweets: tweets } );
+  res.render( 'index', { tweets } );
 });
 
+router.get('/users/:name', function (req, res) {
+  let name = req.params.name;
+  let tweets = tweetBank.find( {name} );
+  res.render('index', { tweets } );
+});
+
+router.get('/users/:uniqueID', function (req, res) {
+  let uniqueID = req.params.uniqueID;
+  let tweets = tweetBank.find( { uniqueID } );
+  res.render('index', { tweets } );
+});
 
 module.exports = router;

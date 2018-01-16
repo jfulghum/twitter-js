@@ -57,3 +57,13 @@ code {
 .content .by {
   font-weight: bold;
 }
+
+.col-md-9 {
+  color: rgb(41, 86, 178 );
+  list-style:none;
+
+}
+
+.col-md-3 {
+   color: rgb(41, 86, 178 );
+}
