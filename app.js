@@ -25,6 +25,7 @@ console.log("This is an updated special place.");
 next();
 });
 
+app.use(express.static('public'));
 
 // app.get('/special/subpath', (req, res) =>
 // res.send("You've reached the special place."));
@@ -35,7 +36,7 @@ next();
 // res.render('index', {people: tweetBank.list()} );
 // })
 
-// app.get('/tweets', (req, res) => 
+// app.get('/tweets', (req, res) =>
 // res.render('index', {people: tweetBank.list()} ));
 
 
