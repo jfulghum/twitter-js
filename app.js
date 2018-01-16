@@ -7,7 +7,7 @@ app.use((req, res, next) => {
 });
 
 app.use('/special/', (req, res, next) => {
-console.log("HAHAHAHAHA.");
+console.log("This is an updated special place.");
 next();
 });
 
